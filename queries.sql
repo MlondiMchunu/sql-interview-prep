@@ -23,3 +23,7 @@ create table favourite_food(
 alter table favourite_food rename favorite_food;
 
 show tables;
+
+/*modify primary key by adding auto increment*/
+set foreign_key_checks = 1;
+alter table person modify person_id smallint unsigned auto_increment;
