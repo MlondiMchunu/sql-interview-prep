@@ -42,3 +42,9 @@ create temporary table actors_j
 (actor_id smallint(5),
 first_name varchar(45),
 last_name varchar(45));
+
+select * from actor limit 5;
+
+insert into actors_j
+select actor_id, first_name, last_name
+from actor where last_name like 'J%';
