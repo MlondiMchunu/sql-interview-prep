@@ -67,3 +67,18 @@ select customer.first_name, customer.last_name,
           inner join rental
           on customer.customer_id = rental.customer_id
           where date(rental.rental_date) = '2005-06-14';
+
+use sakila;
+
+select * from rental limit 5;
+
+
+show databases;
+
+use sakila;
+show tables;
+
+use restaurant;
+show tables;
+desc person;
+insert into person 
