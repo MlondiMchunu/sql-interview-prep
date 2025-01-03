@@ -36,3 +36,9 @@ where first_name = 'JESSIE')cust;
 
 
 use sakila;
+
+/*temporary tables*/
+create temporary table actors_j
+(actor_id smallint(5),
+first_name varchar(45),
+last_name varchar(45));
