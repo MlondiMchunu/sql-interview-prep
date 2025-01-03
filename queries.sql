@@ -59,3 +59,11 @@ from customer;
 select * from cust_view limit 10;
 
 desc cust_view;
+
+/*table links*/
+select customer.first_name, customer.last_name, 
+       time(rental.rental_date) rental_time
+       from customer
+          inner join rental
+          on customer.customer_id = rental.customer_id
+          where date(rental.rental_date) = '2005-06-14';
