@@ -27,3 +27,12 @@ show tables;
 /*modify primary key by adding auto increment*/
 set foreign_key_checks = 1;
 alter table person modify person_id smallint unsigned auto_increment;
+
+
+/*Derived (subquery-generated) tables*/
+select concat(cust.first_name,' , ',cust.last_name) full_name from (select first_name, last_name, email 
+from customer
+where first_name = 'JESSIE')cust;
+
+
+use sakila;
