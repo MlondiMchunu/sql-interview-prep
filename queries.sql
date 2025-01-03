@@ -82,3 +82,13 @@ use restaurant;
 show tables;
 desc person;
 insert into person 
+
+show databases;
+use shop;
+show tables;
+
+select Customer.FirstName, Customer.LastName, Customer.City, `Order`.OrderDate,`Order`.OrderNumber,`Order`.TotalAmount 
+from Customer 
+inner join `Order` 
+on Customer.Id = `Order`.CustomerId 
+where `Order`.OrderNumber > 542386;
