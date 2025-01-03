@@ -47,4 +47,15 @@ select * from actor limit 5;
 
 insert into actors_j
 select actor_id, first_name, last_name
-from actor where last_name like 'J%';
+from actor where last_name like '%e%';
+
+select * from actors_j;
+
+/*views*/
+create view cust_view as 
+select customer_id, first_name, last_name, active
+from customer;
+
+select * from cust_view limit 10;
+
+desc cust_view;
