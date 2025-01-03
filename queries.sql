@@ -92,3 +92,21 @@ from Customer
 inner join `Order` 
 on Customer.Id = `Order`.CustomerId 
 where `Order`.OrderNumber > 542386;
+
+select Customer.FirstName, Customer.LastName, Customer.City, `Order`.OrderDate,`Order`.OrderNumber,`Order`.TotalAmount 
+from Customer 
+inner join `Order` 
+on Customer.Id = `Order`.CustomerId;
+
+
+/*group by and having clause*/
+show tables;
+
+use sakila;
+show tables;
+
+select c.first_name, c.last_name, count(*)  
+from customer c 
+inner join rental r 
+on c.customer_id = r.customer_id
+group by c.first_name, c.last_name having count(*)>=40;
